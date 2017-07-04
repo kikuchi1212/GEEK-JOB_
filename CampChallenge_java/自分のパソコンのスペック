@@ -1,0 +1,39 @@
+OS 名	Microsoft Windows 10 Home
+バージョン	10.0.15063 ビルド 15063
+OS の他の説明 	利用不可
+OS 製造元	Microsoft Corporation
+システム名	EXP-0010
+システム製造元	FUJITSU
+システムモデル	FMVNA4NE-
+システムの種類	x64-ベース PC
+システム SKU
+プロセッサ	Intel(R) Core(TM) i5-2520M CPU @ 2.50GHz、2501 Mhz、2 個のコア、4 個のロジカル プロセッサ
+BIOS バージョン/日付	FUJITSU // Phoenix Technologies Ltd. Version 1.04, 2011/04/18
+SMBIOS バージョン	2.6
+埋め込みコントローラーのバージョン	255.255
+BIOS モード	レガシ
+BaseBoard メーカー	FUJITSU
+BaseBoard モデル	利用不可
+BaseBoard 名	ベース ボード
+プラットフォームの役割	モバイル
+セキュア ブートの状態	サポートされていません
+PCR7 構成	バインド不可
+Windows ディレクトリ	C:\Windows
+システム ディレクトリ	C:\Windows\system32
+ブート デバイス	\Device\HarddiskVolume1
+ロケール	日本
+ハードウェア アブストラクション レイヤー	バージョン = "10.0.15063.0"
+ユーザー名	EXP-0010\guest1Day
+タイム ゾーン	東京 (標準時)
+インストール済みの物理メモリ (RAM)	4.00 GB
+合計物理メモリ	3.91 GB
+利用可能な物理メモリ	1.48 GB
+合計仮想メモリ	5.29 GB
+利用可能な仮想メモリ	2.07 GB
+ページ ファイルの空き容量	1.38 GB
+ページ ファイル	C:\pagefile.sys
+デバイス暗号化のサポート	デバイスの自動暗号化が失敗した理由: PCR7 バインドはサポートされていません, ハードウェア セキュリティ テスト インターフェイスが失敗しました。デバイスは InstantGo ではありません, 許可されていない DMA 対応バス/デバイスが検出されました, TPM は使用できません
+Hyper-V - VM モニター モード拡張機能	はい
+Hyper-V - 第 2 レベル アドレス変換拡張機能	はい
+Hyper-V - ファームウェアで仮想化が有効	はい
+Hyper-V - データ実行防止	はい
