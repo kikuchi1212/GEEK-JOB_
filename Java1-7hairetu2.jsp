@@ -1,0 +1,36 @@
+<%-- 
+    Document   : Java1-7hairetu1
+    Created on : 2017/07/11, 17:41:22
+    Author     : guest1Day
+--%>
+
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>JSP Page</title>
+    </head>
+    <body>
+        <%
+        String[] data ={"10","100","soeda","hayashi","-20","118","END"};
+        out.print(data[0]+"<br>");
+        out.print(data[1]+"<br>");
+        out.print(data[2]+"<br>");
+        out.print(data[3]+"<br>");
+        out.print(data[4]+"<br>");
+        out.print(data[5]+"<br>");
+        out.print(data[6]+"<br><br>");
+        
+        data[2] ="33";
+        out.print(data[0]+"<br>");
+        out.print(data[1]+"<br>");
+        out.print(data[2]+"<br>");
+        out.print(data[3]+"<br>");
+        out.print(data[4]+"<br>");
+        out.print(data[5]+"<br>");
+        out.print(data[6]);
+
+        %>
+    </body>
+</html>
