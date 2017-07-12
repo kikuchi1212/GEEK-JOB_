@@ -1,6 +1,6 @@
 <%-- 
-    Document   : java1-9forbun2
-    Created on : 2017/07/12, 14:35:57
+    Document   : java1-9forbun3
+    Created on : 2017/07/12, 14:36:24
     Author     : guest1Day
 --%>
 
@@ -12,6 +12,13 @@
         <title>JSP Page</title>
     </head>
     <body>
-        <h1>Hello World!</h1>
+            <%
+            String NAME="A";
+            String NUM="A";
+            for(int i=0;i<15;i++){
+            out.print(NAME+NUM);
+            }        
+            
+            %> 
     </body>
 </html>
