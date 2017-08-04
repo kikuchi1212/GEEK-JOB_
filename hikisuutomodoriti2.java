@@ -48,6 +48,7 @@ public class hikisuutomodoriti2 extends HttpServlet {
         String[][] al = myprofile();
         //配列を出す
         for(int i=0;i<3;i++)
+        //要素を出す
         for(int j=1;j<4;j++){
             if(al[i][j]==null){
             continue;
@@ -55,13 +56,7 @@ public class hikisuutomodoriti2 extends HttpServlet {
             out.println(al[i][j]);
             }
             
-        
-        
-        
-        
-    
-//         
-//        }
+        }
     }
     }
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
