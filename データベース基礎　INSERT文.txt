@@ -1,0 +1,51 @@
+Setting environment for using XAMPP for Windows.
+guest1Day@EXP-0010 c:\xampp
+# mysql -u KIKUCHI1212 -p
+Enter password: ********
+Welcome to the MariaDB monitor.  Commands end with ; or \g.
+Your MariaDB connection id is 2
+Server version: 10.1.21-MariaDB mariadb.org binary distribution
+
+Copyright (c) 2000, 2016, Oracle, MariaDB Corporation Ab and others.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+MariaDB [(none)]> CREATE DATABASE Challenge_db1;
+ERROR 1044 (42000): Access denied for user 'KIKUCHI1212'@'localhost' to database 'challenge_db1'
+MariaDB [(none)]> USE Challenge_db;
+Database changed
+MariaDB [Challenge_db]> CREATE TABLE profiles(profilesID int,name varchar(255),tel varchar(255),age int,birthday date);
+ERROR 1050 (42S01): Table 'profiles' already exists
+MariaDB [Challenge_db]>
+MariaDB [Challenge_db]>  CREATE TABLE profiles1(profilesID int,name varchar(255),tel varchar(255),age int,birthday date);
+Query OK, 0 rows affected (1.69 sec)
+
+MariaDB [Challenge_db]> INSERT INTO profiles1(profilesID,name,tel,age,birthday)VALUES(1,'田中　実','012-345-6789',30,'1994-02-01');
+Query OK, 1 row affected (0.47 sec)
+
+MariaDB [Challenge_db]>  INSERT INTO profiles1(profilesID,name,tel,age,birthday)VALUES(2,'鈴木　茂','090-1122-3344',37,'1987-08-12');
+Query OK, 1 row affected (0.11 sec)
+
+MariaDB [Challenge_db]>  INSERT INTO profiles1(profilesID,name,tel,age,birthday)VALUES(3,'鈴木　実','080-5566-7788',24,'2000-12-24');
+Query OK, 1 row affected (0.08 sec)
+
+MariaDB [Challenge_db]>  INSERT INTO profiles1(profilesID,name,tel,age,birthday)VALUES(4,'佐藤　清','012-0987-6543',19,'2005-08-01');
+Query OK, 1 row affected (0.06 sec)
+
+MariaDB [Challenge_db]>  INSERT INTO profiles1(profilesID,name,tel,age,birthday)VALUES(5,'高橋　清','090-9900-1234',24,'2000-12-24');
+Query OK, 1 row affected (0.30 sec)
+
+MariaDB [Challenge_db]>
+MariaDB [Challenge_db]> SELECT profilesID,name,tel,age,birthday FROM profiles1;
++------------+----------+---------------+------+------------+
+| profilesID | name     | tel           | age  | birthday   |
++------------+----------+---------------+------+------------+
+|          1 | 田中　実 | 012-345-6789  |   30 | 1994-02-01 |
+|          2 | 鈴木　茂 | 090-1122-3344 |   37 | 1987-08-12 |
+|          3 | 鈴木　実 | 080-5566-7788 |   24 | 2000-12-24 |
+|          4 | 佐藤　清 | 012-0987-6543 |   19 | 2005-08-01 |
+|          5 | 高橋　清 | 090-9900-1234 |   24 | 2000-12-24 |
++------------+----------+---------------+------+------------+
+5 rows in set (0.17 sec)
+
+MariaDB [Challenge_db]>
