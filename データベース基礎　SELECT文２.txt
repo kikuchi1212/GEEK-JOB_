@@ -1,0 +1,9 @@
+MariaDB [Challenge_db]> SELECT profilesID,name,tel,age,birthday FROM profiles1 WHEE name='‚‹´@´';
++------------+----------+---------------+------+------------+
+| profilesID | name     | tel           | age  | birthday   |
++------------+----------+---------------+------+------------+
+|          5 | ‚‹´@´ | 090-9900-1234 |   24 | 2000-12-24 |
++------------+----------+---------------+------+------------+
+1 row in set (0.34 sec)
+
+MariaDB [Challenge_db]>
