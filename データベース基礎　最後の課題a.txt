@@ -1,0 +1,123 @@
+guest1Day@EXP-0010 c:\xampp
+# mkdir geekjob
+
+guest1Day@EXP-0010 c:\xampp
+# cd geekjob
+
+guest1Day@EXP-0010 c:\xampp\geekjob
+# mysql -u KIKUCHI1212 -p
+Enter password: ********
+Welcome to the MariaDB monitor.  Commands end with ; or \g.
+Your MariaDB connection id is 3
+Server version: 10.1.21-MariaDB mariadb.org binary distribution
+
+Copyright (c) 2000, 2016, Oracle, MariaDB Corporation Ab and others.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+MariaDB [(none)]> USE Challenge_db;
+Database changed
+MariaDB [Challenge_db]> show tables;
++------------------------+
+| Tables_in_challenge_db |
++------------------------+
+| profiles               |
+| profiles1              |
++------------------------+
+2 rows in set (0.06 sec)
+
+MariaDB [Challenge_db]> source creat.sql;
+Query OK, 0 rows affected (0.30 sec)
+
+Query OK, 0 rows affected (0.20 sec)
+
+Query OK, 0 rows affected (0.31 sec)
+
+MariaDB [Challenge_db]> show tables;
++------------------------+
+| Tables_in_challenge_db |
++------------------------+
+| department             |
+| profiles               |
+| profiles1              |
+| station                |
+| user                   |
++------------------------+
+5 rows in set (0.00 sec)
+
+MariaDB [Challenge_db]> source insert.sql;
+ERROR 1452 (23000) at line 2 in file: 'insert.sql': Cannot add or update a child row: a foreign key constraint fails (`challenge_db`.`user`, CONSTRAINT `user_ibfk_1` FOREIGN KEY (`departmentID`) REFERENCES `department` (`departmentID`))
+ERROR 1452 (23000) at line 3 in file: 'insert.sql': Cannot add or update a child row: a foreign key constraint fails (`challenge_db`.`user`, CONSTRAINT `user_ibfk_1` FOREIGN KEY (`departmentID`) REFERENCES `department` (`departmentID`))
+ERROR 1452 (23000) at line 4 in file: 'insert.sql': Cannot add or update a child row: a foreign key constraint fails (`challenge_db`.`user`, CONSTRAINT `user_ibfk_1` FOREIGN KEY (`departmentID`) REFERENCES `department` (`departmentID`))
+ERROR 1452 (23000) at line 5 in file: 'insert.sql': Cannot add or update a child row: a foreign key constraint fails (`challenge_db`.`user`, CONSTRAINT `user_ibfk_1` FOREIGN KEY (`departmentID`) REFERENCES `department` (`departmentID`))
+ERROR 1452 (23000) at line 6 in file: 'insert.sql': Cannot add or update a child row: a foreign key constraint fails (`challenge_db`.`user`, CONSTRAINT `user_ibfk_1` FOREIGN KEY (`departmentID`) REFERENCES `department` (`departmentID`))
+Query OK, 1 row affected (0.03 sec)
+
+Query OK, 1 row affected (0.05 sec)
+
+Query OK, 1 row affected (0.06 sec)
+
+Query OK, 1 row affected (0.13 sec)
+
+Query OK, 1 row affected (0.02 sec)
+
+Query OK, 1 row affected (0.06 sec)
+
+Query OK, 1 row affected (0.04 sec)
+
+Query OK, 1 row affected (0.03 sec)
+
+MariaDB [Challenge_db]> source insert.sql;
+ERROR 1062 (23000) at line 1 in file: 'insert.sql': Duplicate entry '1' for key 'PRIMARY'
+ERROR 1062 (23000) at line 2 in file: 'insert.sql': Duplicate entry '2' for key 'PRIMARY'
+ERROR 1062 (23000) at line 3 in file: 'insert.sql': Duplicate entry '3' for key 'PRIMARY'
+ERROR 1062 (23000) at line 4 in file: 'insert.sql': Duplicate entry '1' for key 'PRIMARY'
+ERROR 1062 (23000) at line 5 in file: 'insert.sql': Duplicate entry '2' for key 'PRIMARY'
+ERROR 1062 (23000) at line 6 in file: 'insert.sql': Duplicate entry '3' for key 'PRIMARY'
+ERROR 1062 (23000) at line 7 in file: 'insert.sql': Duplicate entry '4' for key 'PRIMARY'
+ERROR 1062 (23000) at line 8 in file: 'insert.sql': Duplicate entry '5' for key 'PRIMARY'
+Query OK, 1 row affected (0.04 sec)
+
+Query OK, 1 row affected (0.01 sec)
+
+Query OK, 1 row affected (0.10 sec)
+
+Query OK, 1 row affected (0.06 sec)
+
+Query OK, 1 row affected (0.03 sec)
+
+MariaDB [Challenge_db]> SELECT * FROM user;
++--------+----------+---------------+------+------------+--------------+-----------+
+| userID | name     | tell          | age  | birthday   | departmentID | stationID |
++--------+----------+---------------+------+------------+--------------+-----------+
+|      1 | 田中　実 | 012-345-6789  |   30 | 1994-02-01 |            3 |         1 |
+|      2 | 鈴木　茂 | 090-1122-3344 |   37 | 1987-08-12 |            3 |         4 |
+|      3 | 鈴木　実 | 080-5566-7788 |   24 | 2000-12-24 |            2 |         5 |
+|      4 | 佐藤　清 | 012-0987-6543 |   19 | 2005-08-01 |            1 |         5 |
+|      5 | 高橋　清 | 090-9900-1234 |   24 | 2000-12-24 |            3 |         5 |
++--------+----------+---------------+------+------------+--------------+-----------+
+5 rows in set (0.00 sec)
+
+MariaDB [Challenge_db]> SELECT * FROM department;
++--------------+----------------+
+| departmentID | departmentName |
++--------------+----------------+
+|            1 | 開発部         |
+|            2 | 営業部         |
+|            3 | 総務部         |
++--------------+----------------+
+3 rows in set (0.03 sec)
+
+MariaDB [Challenge_db]> SELECT * FROM station;
++-----------+-------------+
+| stationID | stationName |
++-----------+-------------+
+|         1 | 九段下      |
+|         2 | 永田町      |
+|         3 | 渋谷        |
+|         4 | 神保町      |
+|         5 | 上井草      |
++-----------+-------------+
+5 rows in set (0.00 sec)
+
+MariaDB [Challenge_db]>

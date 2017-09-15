@@ -1,0 +1,22 @@
+# mysql -u KIKUCHI1212 -p
+Enter password: ********
+Welcome to the MariaDB monitor.  Commands end with ; or \g.
+Your MariaDB connection id is 2
+Server version: 10.1.21-MariaDB mariadb.org binary distribution
+
+Copyright (c) 2000, 2016, Oracle, MariaDB Corporation Ab and others.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+
+
+MariaDB [Challenge_db]> CREATE TABLE user(userID int,name varchar(255),tell varchar(255),age int,birthday date,departmentID int,stationID int);
+
+
+MariaDB [Challenge_db]> /*主キーと外部キーをつけ忘れたので追加*/
+MariaDB [Challenge_db]> ALTER TABLE user ADD PRIMARY KEY(userID);
+
+Records: 5  Duplicates: 0  Warnings: 0
+
+MariaDB [Challenge_db]> ALTER TABLE user ADD FOREIGN KEY(birthday);
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '' at line 1
