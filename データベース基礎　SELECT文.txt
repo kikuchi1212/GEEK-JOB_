@@ -1,0 +1,9 @@
+MariaDB [Challenge_db]>  SELECT profilesID,name,tel,age,birthday FROM profiles1 WHERE profilesID=3;
++------------+----------+---------------+------+------------+
+| profilesID | name     | tel           | age  | birthday   |
++------------+----------+---------------+------+------------+
+|          3 | —é–Ø@ŽÀ | 080-5566-7788 |   24 | 2000-12-24 |
++------------+----------+---------------+------+------------+
+1 row in set (0.05 sec)
+
+MariaDB [Challenge_db]>
